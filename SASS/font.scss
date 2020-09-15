@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Arial Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Regular'), url('../FONT/ARIAL/FARIAL.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Arial Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Medium'), url('../FONT/ARIAL/ArialMdm.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Arial Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Bold'), url('../FONT/ARIAL/ARIALBD.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto Regular'), url('../FONT/ROBOTO/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto Bold'), url('../FONT/ROBOTO/Roboto-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto Medium'), url('../FONT/ROBOTO/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../FONT/SEGOE/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('../FONT/SEGOE/Segoe UI Bold.woff') format('woff');
+}
