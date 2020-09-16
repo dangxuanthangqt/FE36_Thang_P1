@@ -1,1 +1,74 @@
-div day la header
+
+section.header
+    .container
+        .header__top
+            .header__top-1
+                .header__time 
+                    p.gray-text--light Open time : 8:00 - 18:30 Monday - Sunday
+                ul.header__contact
+                    each val in ["fab fa-facebook-f", "fab fa-twitter", "fab fa-vimeo-v", "fab fa-facebook-f"]
+                        li.header__contact__item
+                            a(href="#")
+                                i(class=val)
+            .header__top-2
+                .header__login
+                    i.fas.fa-user
+                    | Đăng nhập
+                .header__register
+                    i.fas.fa-user
+                    | Đăng ký
+    .header__middle
+        .container
+            .header__middle__img
+                .header__middle__logo
+                    img.header__middle__logo--desktop(src="../../IMG/logo.png" alt="")
+                    img.header__middle__logo--mobile(src="../../IMG/logo-mobile.png" alt="")
+                    p.header__textlogo Món quà từ thiên nhiên
+
+                div.header__middle__img2
+                    div
+                        img(src="../../IMG/HEADER/img-1.png" alt="")
+                    div
+                        img(src="../../IMG/HEADER/img-2.png" alt="")
+            .header__middle__search
+                .header__middle__form
+                    p 
+                        i(class="fas fa-phone")
+                        |Hỗ trợ : (09) 79475216 - (09) 79475216
+                    form(action="")
+                        div.header__middle__form--1
+                            input(type="text" name="a" placeholder="Tìm kiếm ...")
+                            i(class="fas fa-search")
+                        div.header__middle__form--2
+                            img(src="../../IMG/HEADER/sp.png" alt="")
+                            p 0 Sản phẩm
+    nav.header__nav
+        .container
+            ul.nav__list
+                li.nav__item
+                    a(href="#")
+                        img(src="../../IMG/HEADER/icon_collapse.png" alt="")
+                li.nav__item
+                    a(href="#") Trang chủ
+                li.nav__item
+                    a(href="#") Giới thiệu
+                li.nav__item.nav__item--list
+                    a.nav__item--drop(href="#") Sản phẩm
+                    ul.dropdown
+                        each val in ["Sản phẩm","Sản phẩm","Sản phẩm"]
+                            li
+                                a(href="#")= val
+
+                li.nav__item.nav__item--list
+                    a.nav__item--drop(href="#") Sản phẩm mới
+                    ul.dropdown
+                        each val in ["Sản phẩm mới","Sản phẩm mới","Sản phẩm mới"]
+                            li
+                                a(href="#")= val
+                li.nav__item
+                    a(href="#") Tin tức
+                li.nav__item
+                    a(href="#") Liên hệ
+
+
+

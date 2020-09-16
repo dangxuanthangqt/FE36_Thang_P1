@@ -6,9 +6,12 @@ html(lang='en')
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
         link(rel='stylesheet' href='../../CSS/main.css')
         link(rel='stylesheet' href='../../CSS/reset.css')
+        link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.14.0/css/all.css' integrity='sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc' crossorigin='anonymous')
     body
-        block header
+        .wrapper
+            block header
+                include ../COMPONENTS/header.pug
 
-        block content
-        
-        block footer
+            block content
+
+            block footer

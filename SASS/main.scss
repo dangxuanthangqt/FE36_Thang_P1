@@ -1,29 +1,7 @@
 @import './font.scss';
-.roboto{
-    &--bold{
-        font-family: "Roboto Bold";
-    }
-    &--regular{
-        font-family: "Roboto Regular"
-    }
-    &--medium{
-        font-family: "Roboto Medium"
-    }
-    
-}
-.arial{
-    &--bold{
-        font-family: "Arial Bold";
-    }
-    &--regular{
-        font-family: "Arial Regular"
-    }
-    &--medium{
-        font-family: "Arial Medium"
-    }
-    
-}
-.segoe-ui{
-    font-family: 'Segoe UI Bold', sans-serif;
-    font-size: 30;
-}
+@import './BASE/setting.scss';
+@import './BASE/variable.scss';
+
+@import './MIXIN/mixin.scss';
+//components
+@import './COMPONENTS/header.scss';
