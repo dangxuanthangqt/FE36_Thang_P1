@@ -1,0 +1,26 @@
+@mixin flexbox ($justify : flex-start, $align: stretch, $wrap: wrap, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+}
+@mixin  text_custom($font-family, $font-size, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
+    @content;
+}
+
+@mixin media-ipad {
+    @media screen and (max-width : 1023px) and (min-width: 768px) {
+        @content;
+    }
+
+}
+
+@mixin media-mobile {
+    @media only screen  and (max-width : 767px) {
+        @content;
+    }
+}
