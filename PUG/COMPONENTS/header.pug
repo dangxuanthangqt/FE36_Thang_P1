@@ -1,15 +1,25 @@
 
+mixin list-social()
+    ul.header__contact
+        each val in ["fab fa-facebook-f", "fab fa-twitter", "fab fa-vimeo-v", "fab fa-facebook-f"]
+            li.header__contact__item
+                a(href="#")
+                    i(class=val)
+
+
+mixin logo ()
+    .header__middle__logo
+        img.header__middle__logo--desktop(src="../../IMG/logo.png" alt="")
+        img.header__middle__logo--mobile(src="../../IMG/logo-mobile.png" alt="")
+        p.header__textlogo Món quà từ thiên nhiên                    
 section.header
     .container
         .header__top
             .header__top-1
                 .header__time 
                     p.gray-text--light Open time : 8:00 - 18:30 Monday - Sunday
-                ul.header__contact
-                    each val in ["fab fa-facebook-f", "fab fa-twitter", "fab fa-vimeo-v", "fab fa-facebook-f"]
-                        li.header__contact__item
-                            a(href="#")
-                                i(class=val)
+                +list-social()
+
             .header__top-2
                 .header__login
                     i.fas.fa-user
@@ -20,10 +30,8 @@ section.header
     .header__middle
         .container
             .header__middle__img
-                .header__middle__logo
-                    img.header__middle__logo--desktop(src="../../IMG/logo.png" alt="")
-                    img.header__middle__logo--mobile(src="../../IMG/logo-mobile.png" alt="")
-                    p.header__textlogo Món quà từ thiên nhiên
+                +logo()
+
 
                 div.header__middle__img2
                     div
@@ -69,6 +77,14 @@ section.header
                     a(href="#") Tin tức
                 li.nav__item
                     a(href="#") Liên hệ
+            div.nav__mobile 
+                div.nav__mobile--1
+                    a(href="#")
+                        img(src="../../IMG/HEADER/icon_collapse.png" alt="")
+                div.nav__mobile--2
+                    i(class="fas fa-search")
+                    img(src="../../IMG/HEADER/icon-mobile.png" alt="")
+
 
 
 

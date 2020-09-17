@@ -31,6 +31,9 @@
 
             a {
                 color: $gray-light-text;
+                &:hover{
+                 color: $primary-color;
+                }
             }
 
             &:last-child {
@@ -158,12 +161,13 @@
             @include flexbox(flex-start, center);
 
             input {
+                
                 padding: 1.5rem 3rem;
                 border-radius: 3rem;
                 outline: none;
                 border: none;
                width: 100%;
-                @include text_custom("Arial", 1rem, $gray-light-text)
+                @include text_custom("Arial", 1.4rem, $gray-light-text)
             }
             
             p{
@@ -217,6 +221,9 @@
        &--list{
            position: relative;
        }
+    }
+    &__mobile{
+        display: none;
     }
 }
 .dropdown{
@@ -285,6 +292,28 @@
             &__search {
                 display: none;
             }
+        }
+    }
+    .nav{
+        &__list{
+            display: none;
+        }
+        &__mobile{
+            @include flexbox(space-between);
+            padding: 1.5rem 0;
+            &--1{
+
+            }
+            &--2{
+                display: flex;
+                color: white;
+                align-items: center;
+                font-size: 1.6rem;
+                img{
+                    margin-left: 2rem;
+                }
+            }
+
         }
     }
 }

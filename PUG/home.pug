@@ -1,4 +1,10 @@
 extends LAYOUT/common-layout.pug
+block title
+    title Home
 block content
-
-
+    section.carousel
+            img(src="../IMG/HEADER/slide-1920x590.png" alt="sas")
+            ul.carousel__btn
+                each val in [1,2,3]
+                    li.carousel__btn__item 
+                        

@@ -1,1 +1,61 @@
-.header day la footer
+
+include ../VARIABLE/footer.pug
+
+
+
+mixin footer-list (list)
+    ul.item-list
+        each val in list
+            li.item-list__item
+                i(class="fas fa-angle-right")
+                span=val
+
+
+.footer 
+    .footer__border
+        .container
+            .footer__contact
+                .footer__contact-1
+                    p Kênh thông tin từ chúng tôi:
+                    +list-social()
+                .footer__contact-2
+                    p Đăng kí nhận email từ chúng tôi
+                .footer__contact-3
+                    form(action="")
+                        div
+                            input(type="text" name="" placeholder="Email...")
+                            i(class="fas fa-paper-plane")
+    .footer__border
+        .container
+            .footer__middle 
+                .footer__middle-1
+                    +logo()
+                    p.footer__text Green shop được thành lập từ 8/2010 được sự tin tưởng của khách trong suot thời gian hoạt động đến nay cửa hàng ngày càng phát triển
+                    div
+                        i(class="fas fa-mobile-alt") 
+                        span Điện thoại: (84-4) 0979475124
+                    div
+                        i(class="far fa-envelope")
+                        span Email: dangxuanthangqt@gmail.com
+                ul.footer__middle-2
+                    li.middle-2__item
+                        p.middle-2__title THÔNG TIN KHÁCH HÀNG
+                        +footer-list(footer_list1)
+                    li.middle-2__item
+                        p.middle-2__title HỖ TRỢ DỊCH VỤ
+                        +footer-list(footer_list2)
+                    li.middle-2__item
+                        p.middle-2__title CHÍNH SÁCH ƯU ĐÃI
+                        +footer-list(footer_list3)
+                    li.middle-2__item
+                        p.middle-2__title TIN TỨC
+                        +footer-list(footer_list4)
+                                   
+    .container
+        .footer__bottom
+            ul.footer__bottom-1
+                each val in footer_list5
+                    li=val
+            ul.footer__bottom-2
+                each val in footer_list6
+                    li(class=val)
