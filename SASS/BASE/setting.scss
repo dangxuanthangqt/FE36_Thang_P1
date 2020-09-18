@@ -50,3 +50,34 @@ a{
         color: $gray-light-text;
     }
 }
+.btn{
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    font-size: 1.6rem;
+    
+    border: none;
+    &--primary{
+        background-color: $primary-color;
+        padding: 1.5rem 3rem;
+        &:hover{
+            background-color: $primary-color-hover;
+        }
+    }
+    &--rounded{
+        border-radius: 2rem;
+    }
+    &--circle{
+        border-radius: 50%;
+    }
+    &--circle55{
+        border-radius: 50%;
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    &--red{
+        background-color: $red-color;
+    }
+}

@@ -38,18 +38,11 @@ mixin footer-list (list)
                         i(class="far fa-envelope")
                         span Email: dangxuanthangqt@gmail.com
                 ul.footer__middle-2
-                    li.middle-2__item
-                        p.middle-2__title THÔNG TIN KHÁCH HÀNG
-                        +footer-list(footer_list1)
-                    li.middle-2__item
-                        p.middle-2__title HỖ TRỢ DỊCH VỤ
-                        +footer-list(footer_list2)
-                    li.middle-2__item
-                        p.middle-2__title CHÍNH SÁCH ƯU ĐÃI
-                        +footer-list(footer_list3)
-                    li.middle-2__item
-                        p.middle-2__title TIN TỨC
-                        +footer-list(footer_list4)
+                    each val in footer_list
+                        li.middle-2__item
+                            p.middle-2__title=val.title
+                            +footer-list(val.list)
+                  
                                    
     .container
         .footer__bottom

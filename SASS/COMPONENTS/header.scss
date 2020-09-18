@@ -301,9 +301,7 @@
         &__mobile{
             @include flexbox(space-between);
             padding: 1.5rem 0;
-            &--1{
-
-            }
+           
             &--2{
                 display: flex;
                 color: white;

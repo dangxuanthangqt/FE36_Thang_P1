@@ -1,26 +1,424 @@
 .carousel {
     position: relative;
-    img{
+
+    img {
         width: 100%;
         //height: 50rem;
         object-fit: cover;
     }
-    &__btn{
+
+    &__btn {
         position: absolute;
         display: flex;
         bottom: 3rem;
         left: 50%;
         transform: translateX(-50%);
-        &__item{
+
+        &__item {
             cursor: pointer;
             width: 1.5rem;
             height: 1.5rem;
             background: white;
             border-radius: 50%;
             margin: 0.5rem;
-            &:hover{
+
+            &:hover {
                 background-color: $primary-color;
             }
         }
+    }
+}
+
+.panigation {
+    i {
+        cursor: pointer;
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 1px solid $gray-border;
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            @include flexbox(center, center)
+        }
+    }
+}
+
+.hot-product {
+    padding-top: 5rem;
+
+    &__top {
+        border-bottom: 1px solid $gray-light-text;
+        @include flexbox(space-between)
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-family: "Roboto Regular";
+        padding-bottom: 2rem;
+        font-weight: bold;
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+    }
+
+    &__list {
+        margin-top: 4rem;
+        @include flexbox(space-between)
+    }
+
+    &__list1 {
+        width: 49%;
+        @include flexbox(space-between);
+
+        .card {
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
+
+    &__list2 {
+        width: 49%;
+        @include flexbox(space-between);
+        flex-direction: row-reverse;
+
+        .card {
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.card {
+    width: 48%;
+    font-family: "Arial";
+    margin-bottom: 2rem;
+
+    img {
+        width: 100%;
+    }
+
+    &__action {
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            .card__action__content {
+                visibility: visible;
+                background-color: $card-hover;
+                opacity: 0.8;
+            }
+
+            .discount {
+                display: none;
+            }
+
+        }
+
+        &__content {
+
+
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            @include flexbox(center, center);
+
+            button:last-child {
+                margin-left: 1rem;
+                color: $gray-text;
+            }
+
+
+        }
+    }
+
+    &__content {
+        border: 1px solid $gray-border;
+        border-top: none;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        font-size: 1.6rem;
+        color: $gray-light-text;
+
+        &__star {
+            padding: 2rem;
+
+            i::before {
+                color: $star-color;
+            }
+        }
+
+        &__price {
+            color: $red-color;
+            font-family: "Arial Bold";
+            font-size: 2rem;
+        }
+    }
+
+}
+
+.discount {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 6rem;
+    height: 6rem;
+    padding: 1;
+    font-size: 1.2rem;
+}
+
+.hot-product1 {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    padding-top: 5rem;
+
+    &__part1 {
+        width: 23.5%;
+    }
+
+    &__list1 {
+        margin-top: 3rem;
+    }
+
+    &__part2 {
+        width: 74.5%;
+    }
+
+    &__list2 {
+        padding-top: 3rem;
+        width: 100%;
+
+        .card {
+            width: 31.5%;
+
+            &__content {
+                padding: 1.3rem;
+
+                &__star {
+                    padding: 1rem;
+                }
+            }
+
+        }
+
+        &--mobile {
+            display: none;
+        }
+
+        &--desktop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+.card-small {
+    border: 1px solid $gray-border;
+    padding: 1.5rem;
+
+    img {
+        width: 40%;
+    }
+
+    display: flex;
+
+    .card__content {
+        padding: 0.5rem 0;
+        border: none;
+
+        &__star {
+            padding: 1rem;
+        }
+
+        &__price {
+            del {
+                display: none;
+            }
+        }
+    }
+}
+
+.banner {
+    margin-top: 3rem;
+    &__img{
+        width: 100%;
+    }
+}
+
+.new-product {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    &__list {
+
+        margin-top: 3rem;
+
+        .card {
+            width: 23.5%;
+        }
+
+        &--mobile {
+            display: none;
+        }
+
+        &--desktop {
+            @include flexbox(space-between);
+        }
+    }
+}
+.news{
+    font-family: "Arial";
+    font-size: 1.3rem;
+    color: $gray-light-text;
+    margin-bottom: 3rem;
+    &__list{
+        margin-top: 3rem;
+        @include flexbox(space-between);
+    }
+    &__card{
+        width: 31.5%;
+        img{
+            width: 100%;
+        }
+        &__content{
+            padding: 2rem 0;
+            width: 100%;
+        }
+        &__time{
+            font-style: italic;
+        }
+        &__title{
+            font-weight: bold;;
+            color: $primary-color;
+            padding: 2rem 0;
+        }
+        &__more{
+            cursor: pointer;
+            display: inline-block;
+            padding-top: 2rem;
+            font-style: italic;
+            color: $primary-color;
+        }
+    }
+}
+@include media-mobile {
+    .carousel {
+        img {
+            height: 23rem;
+
+        }
+    }
+
+    .hot-product {
+
+        &__list1 {
+            width: 100%;
+        }
+
+        &__list2 {
+            width: 100%;
+        }
+    }
+
+    .card {
+        font-size: 1.2rem;
+
+        &__content {
+            font-size: inherit;
+
+            &__price {
+                font-size: inherit;
+            }
+
+            &__star {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+
+        &--circle {
+            padding: 0;
+        }
+
+        &--circle55 {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .discount {
+        width: 4rem;
+        height: 4rem;
+        padding: 0 0;
+    }
+
+    .hot-product1 {
+        &__part1 {
+            width: 100%;
+        }
+
+        &__part2 {
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        &__list2 {
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    }
+
+    .card-small {
+        .card__content {
+            font-size: 1.6rem;
+            font-family: "Arial";
+            margin: 0 auto;
+
+        }
+    }
+
+    .new-product {
+        &__list {
+
+            &--mobile {
+                display: block;
+                .card{
+                    width: 100%;
+                }
+            }
+
+            &--desktop {
+                display: none;
+            }
+        }
+    }
+    .news{
+        display: none;
     }
 }
