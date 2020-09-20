@@ -1,5 +1,5 @@
 
-extends LAYOUT/common-layout.pug
+extends ../LAYOUT/common-layout.pug
 
 //--------------------------------------
 mixin card-content(val)
@@ -47,9 +47,9 @@ mixin news-card(val)
 block title
     title Home
 block content
-    include ./VARIABLE/homepage.pug
+    include ../VARIABLE/homepage.pug
     section.carousel
-        img(src="../IMG/HEADER/slide-1920x590.png" alt="sas")
+        img(src="../../IMG/HEADER/slide-1920x590.png" alt="sas")
         ul.carousel__btn
             each val in [1,2,3]
                 li.carousel__btn__item 
@@ -85,10 +85,10 @@ block content
                         each val in list4
                             +hot-product-list(val)
                     div.hot-product1__list2--mobile
-                        +hot-product-list({title:"Cây dứa nhỏ",price:"375.000",discount:"",src:"../IMG/spx2-11.png"})
+                        +hot-product-list({title:"Cây dứa nhỏ",price:"375.000",discount:"",src:"../../IMG/spx2-11.png"})
     section.banner
         .container
-            img(class="banner__img" src="../IMG/HEADER/banner-11140x217.png" alt="")
+            img(class="banner__img" src="../../IMG/HEADER/banner-11140x217.png" alt="")
     section.new-product
         .container
             .hot-product__top
@@ -99,7 +99,7 @@ block content
                     each val in list5
                         +hot-product-list(val)
                 .new-product__list--mobile
-                    +hot-product-list({title:"Cây dứa nhỏ",price:"375.000",discount:"",src:"../IMG/spx2-11.png"})
+                    +hot-product-list({title:"Cây dứa nhỏ",price:"375.000",discount:"",src:"../../IMG/spx2-11.png"})
     section.news
         .container
             .hot-product__top
@@ -107,5 +107,4 @@ block content
                 +panigation()
             .news__list
                 each val in list6
-                    +news-card(val)
-               
+                    +news-card(val)          

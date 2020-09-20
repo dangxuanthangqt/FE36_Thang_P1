@@ -131,6 +131,25 @@ a {
   background-color: #d64146;
 }
 
+.color--green {
+  color: #98cb4a;
+}
+.color--orange {
+  color: #f76d3c;
+}
+.color--purple {
+  color: #913ccd;
+}
+.color--pink {
+  color: #f15f74;
+}
+.color--yellow {
+  color: #f7d842;
+}
+.color--blue {
+  color: #5481e6;
+}
+
 .header {
   background-color: #202020;
 }
@@ -988,6 +1007,218 @@ a {
 
   .news {
     display: none;
+  }
+}
+.breadcrum {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.breadcrum a {
+  display: inline;
+}
+
+.bread-crumb {
+  font-family: "Arial";
+  font-size: 1.4rem;
+  color: #898989;
+  cursor: pointer;
+}
+.bread-crumb--active {
+  color: #3fb871;
+}
+
+.grid-content {
+  padding-bottom: 10rem;
+}
+.grid-content .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid-content__catalog {
+  width: 23%;
+}
+.grid-content__list {
+  width: 74%;
+}
+.grid-content__list img {
+  width: 100%;
+}
+.grid-content__filter {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid-content__filter1 {
+  font-size: 2rem;
+  color: #898989;
+}
+.grid-content__filter1 i {
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.grid-content__filter2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 1.5rem;
+  font-family: "Arial";
+  color: #898989;
+}
+.grid-content__filter2 label {
+  margin-right: 2rem;
+}
+.grid-content__filter2 form {
+  margin-left: 3rem;
+}
+.grid-content__filter2 select {
+  padding: 1rem;
+  border: 1px solid #898989;
+  color: #898989;
+}
+.grid-content__card {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid-content__card .card {
+  width: 31.3%;
+}
+.grid-content__pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 1.6rem;
+  color: #898989;
+  font-family: "Arial";
+}
+.grid-content__pagination__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid-content__pagination p {
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px solid #898989;
+}
+.grid-content__pagination p:hover {
+  background-color: #3fb871;
+}
+.grid-content__pagination ul li {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  padding: 1rem 1rem;
+  border: 1px solid #898989;
+}
+.grid-content__pagination ul li:hover {
+  background-color: #3fb871;
+}
+.grid-content__pagination ul li:first-child {
+  background-color: #3fb871;
+}
+
+.catalog__title {
+  border-bottom: 1px solid #898989;
+}
+.catalog__title h4 {
+  color: #3fb871;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #3fb871;
+}
+.catalog__list {
+  padding-top: 2rem;
+}
+.catalog__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 1.4rem;
+  color: #898989;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #898989;
+}
+.catalog__item i {
+  margin-right: 1.5rem;
+}
+.catalog__item a {
+  cursor: pointer;
+  font-family: "Arial";
+}
+.catalog__item a:hover {
+  color: #3fb871;
+}
+.catalog__search-price {
+  margin-top: 2rem;
+}
+.catalog__search-color {
+  margin-top: 3rem;
+}
+
+.search-color__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.search-color__item {
+  display: flex;
+  font-size: 1.2rem;
+  width: 50%;
+  padding: 1.5rem 0;
+}
+.search-color__item i {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+.search-color__link {
+  font-family: "Arial";
+  color: #898989;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-content__catalog {
+    width: 100%;
+  }
+  .grid-content__list {
+    width: 100%;
+  }
+  .grid-content__filter2 form {
+    margin-left: 0;
+    padding-top: 1.5rem;
+  }
+  .grid-content__card .card {
+    width: 100%;
+  }
+  .grid-content__pagination {
+    font-size: 1rem;
+    justify-content: center;
+  }
+  .grid-content__pagination ul li {
+    padding: 1rem;
+    margin: 0;
   }
 }
 

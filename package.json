@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "sass --watch ./SASS/main.scss ./CSS/main.css",
-    "pug": "pug -w ./PUG/home.pug -o ./HTML/ -P",
+    "pug": "pug -w ./PUG/VIEWS -o ./HTML/VIEWS -P",
     "start": "npm-run-all -p -r scss pug"
   },
   "author": "Dang Xuan Thang",
