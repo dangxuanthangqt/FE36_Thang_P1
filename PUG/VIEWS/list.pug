@@ -1,6 +1,26 @@
 extends grid.pug
+//----------mixin
+mixin stars()
+    each val in ["fas fa-star","fas fa-star","fas fa-star","fas fa-star","fas fa-star-half-alt"]
+        i(class=val)
+mixin card-horizontal(val)
+    .card-horizontal
+        img(src=val.src alt="")
+        .card-horizontal__content
+            h4.card-horizontal__name=val.name
+            ul.card-horizontal__stars
+                +stars()
+            p.card-horizontal__desc=val.desc
+            p.card-horizontal__price=val.price
+            .card-horizontal__actions
+                button.btn.btn--primary.btn--rounded MUA NGAY
+                i(class="fas fa-search")
+                i(class="fas fa-heart")
 block title
     title List
-block bread-crumb
-    .container
-            +bread-crumb("Danh sách sản phẩm")
+block list-card
+    .list-card
+        include ../VARIABLE/list.pug
+        each val in list1
+            +card-horizontal(val)
+
