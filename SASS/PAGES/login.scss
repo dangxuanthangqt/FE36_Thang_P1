@@ -1,0 +1,86 @@
+.login {
+    &__middle{
+        .container{
+            @include flexbox(space-between);
+        }
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+    &__form {
+        width: 45%;
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-family: "Arial";
+            color: $primary-color;
+            margin-bottom: 6rem;
+        }
+
+        &__label {
+            margin-bottom: 1.6rem;
+            display: block;
+            font-size: 1.4rem;
+            font-family: "Arial";
+            color: $gray-light-text;
+        }
+
+        &__input {
+            width: 100%;
+            border: 1px solid $gray-border;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            outline: none;
+        }
+        &__actions{
+            label{
+                display: inline-block;
+                font-size: 1.4rem;
+                color: $gray-text;
+                font-family: "Roboto Medium";
+                margin-left: 1rem;
+            }
+            a{
+                display: inline-block;
+                color: $gray-light-text;
+                font-style: italic;
+                font-size: 1.4rem;
+                margin-left: 2rem;
+                font-family: "Arial";
+                text-decoration: underline;
+            }
+            button{
+                display: block;
+                margin-top: 3.5em;
+            }
+        }
+
+    }
+    &__question{
+        width: 50%;
+        &__desc{
+            color: $gray-light-text;
+            font-size: 1.4rem;
+            font-family: "Arial";
+            line-height: 2;
+            margin-bottom: 3rem;
+        }
+    }
+}
+@include media-mobile{
+    .login{
+        &__middle{
+            margin-top: 0;
+        }
+        &__form{
+            width: 100%;
+            &__title{
+                margin-bottom: 3rem;
+            }
+        }
+        &__question{
+            width: 100%;
+            margin-top: 4rem;
+        }
+    }
+}

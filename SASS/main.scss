@@ -6,9 +6,15 @@
 //components
 @import './COMPONENTS/header.scss';
 @import './COMPONENTS/footer.scss';
+@import './COMPONENTS/pop-up.scss';
 //pages
  @import './PAGES/home.scss';
  @import './PAGES/grid.scss';
  @import './PAGES/list.scss';
  @import './PAGES/news.scss';
  @import './PAGES/detail-news.scss';
+ @import './PAGES//detail-product.scss';
+ @import './PAGES//cart.scss';
+ @import './PAGES/login.scss';
+ @import './PAGES/register.scss';
+ @import './PAGES//contact.scss';

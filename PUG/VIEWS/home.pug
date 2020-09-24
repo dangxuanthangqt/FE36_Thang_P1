@@ -9,8 +9,8 @@ mixin card-content(val)
             each val in ["fas fa-star","fas fa-star","fas fa-star","fas fa-star","fas fa-star-half-alt"]
                 i(class=val)
         p.card__content__price=val.price
-            |   Đ 
-            del 250.000 Đ
+            |   đ 
+            del 250.000 đ
 mixin hot-product-list(val)
     .card
         .card__action
@@ -22,7 +22,7 @@ mixin hot-product-list(val)
                 else 
                     button.btn.btn--circle.btn--red.discount=val.discount          
             .card__action__content
-                button.btn.btn--primary.btn--rounded MUA NGAY 
+                a.btn.btn--primary.btn--rounded(href="./detail-product.html") MUA NGAY 
                 button.btn.btn--circle55
                     i(class="fas fa-search")
         +card-content(val)
@@ -48,6 +48,7 @@ block title
     title Home
 block content
     include ../VARIABLE/homepage.pug
+    include ../COMPONENTS/pop-up.pug
     section.carousel
         img(src="../../IMG/HEADER/slide-1920x590.png" alt="sas")
         ul.carousel__btn

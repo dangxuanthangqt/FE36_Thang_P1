@@ -1,0 +1,35 @@
+extends ../LAYOUT/common-layout.pug
+//--mixin----------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin form-control(val)
+    div.register__form__control
+        label.register__form__label=val
+            span *
+        input(type="text")
+
+block title
+    title Register
+block content
+    section.breadcrumb
+        .container
+            +bread-crumb("Đăng nhập")
+    section.register
+        .container
+            form.register__form(action="")
+                h3.register__form__title THÔNG TIN CÁ NHÂN
+                div.register__form__container1
+                    each val in ["Họ và tên","Số ĐT","Địa chỉ email","Website của bạn"]
+                        +form-control(val)
+                    .register__form__check
+                        input(type="checkbox")
+                        span Đăng ký nhận thông tin qua email
+                h3.register__form__title THÔNG TIN TÀI KHOẢN
+                div.register__form__container2
+                    each val in ["Mật khẩu","Nhập lại mật khẩu"]
+                        +form-control(val)
+                .register__form__action
+                    button.btn.btn--rounded.btn--white QUAY LẠI
+                    button.btn.btn--rounded.btn--primary ĐĂNG KÝ
+                    

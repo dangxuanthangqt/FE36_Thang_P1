@@ -158,8 +158,9 @@
 
         &__price {
             color: $red-color;
-            font-family: "Arial Bold";
+            font-family: "Arial Medium";
             font-size: 2rem;
+            
         }
     }
 
@@ -190,6 +191,18 @@
 
     &__list1 {
         margin-top: 3rem;
+        font-size: 1.4rem;
+        .card{
+            &__content{
+                &__desc{
+                    font-family: "Arial";
+                }
+                &__price{
+                    
+                    font-size: 1.4rem;
+                }
+            }
+        }
     }
 
     &__part2 {
@@ -204,11 +217,12 @@
             width: 31.5%;
 
             &__content {
-                padding: 1.3rem;
+                padding: 2rem;
 
                 &__star {
-                    padding: 1rem;
+                    padding: 1.5rem;
                 }
+               
             }
 
         }
@@ -227,8 +241,8 @@
 
 .card-small {
     border: 1px solid $gray-border;
-    padding: 1.5rem;
-
+    padding: 2rem;
+    
     img {
         width: 40%;
     }
@@ -238,9 +252,9 @@
     .card__content {
         padding: 0.5rem 0;
         border: none;
-
+        font-size: 1.4rem;
         &__star {
-            padding: 1rem;
+            padding: 1.5rem;
         }
 
         &__price {

@@ -1,0 +1,86 @@
+extends ../LAYOUT/common-layout.pug
+//-------------mixin--------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin panigation
+    .panigation
+        i(class="fas fa-angle-left")
+        i(class="fas fa-angle-right")
+mixin card(val)
+    .card
+        .card__action
+            img(src=val.src alt="")
+            if val.discount=="NEW"
+                button.btn.btn--circle.btn--primary.discount=val.discount
+            if val.discount!=="NEW"
+                if val.discount==""
+                else 
+                    button.btn.btn--circle.btn--red.discount=val.discount          
+            .card__action__content
+                a.btn.btn--primary.btn--rounded(href="./detail-product.html") MUA NGAY 
+                button.btn.btn--circle55
+                    i(class="fas fa-search")
+        .card__content
+            p.card__content__desc=val.title
+            ul.card__content__star 
+                each val in ["fas fa-star","fas fa-star","fas fa-star","fas fa-star","fas fa-star-half-alt"]
+                    i(class=val)
+            p.card__content__price=val.price
+                |   đ 
+                del 250.000 đ
+//---------------------------------------------
+block title
+    title Detail product
+block content
+    include ../VARIABLE/detail-product.pug
+    section.breadcrumb
+        .container
+            +bread-crumb("Cây dạ lam")
+    section.detail-product
+        .container
+            .detail-product__product-images
+                .product-images__1
+                    img(src="../../IMG/spx2-15.png" alt="")
+                ul.product-images__list
+                    each val in list3
+                        li.product-images__item
+                            img(src=val alt="")
+
+            .detail-product__product-contents
+                .product-contents__top
+                    p.product-contents__top__name Cây dạ lam
+                    ul.card__content__star 
+                        each val in ["fas fa-star","fas fa-star","fas fa-star","fas fa-star","fas fa-star-half-alt"]
+                            i(class=val)
+                    p.card__content__price 4.099.000
+                        |   đ 
+                        del 4.099.000 đ
+                p.product-contents__desc Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+                .product-contents__quality
+                    span Số lượng
+                    button.btn -
+                    button.btn 1
+                    button.btn +
+                .product-contents__action
+                    a.btn.btn--primary.btn--rounded(href="./cart.html") MUA NGAY
+                    i(class="fas fa-search")
+                    i(class="fas fa-heart")
+                .product-contents__like
+                    img(src="../../IMG/fake-social.png" alt="")
+            .detail-product__tag
+                .detail-product__tag__title
+                    ul
+                        each val in ["THÔNG TIN SẢN PHÂM","KHÁCH HÀNG ĐÁNH GIÁ","THẺ TAG"]
+                            li=val
+                .detail-product__tag__desc
+                    each val in list1
+                        p=val
+    section.same-products
+        .container
+            .same-products__top
+                p.hot-product__title Sản phẩm nổi bật
+                +panigation()
+            .same-products__list
+                each val in list2
+                    +card(val)

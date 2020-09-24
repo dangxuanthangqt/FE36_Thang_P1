@@ -67,7 +67,7 @@ a {
     text-align: center;
     outline: none;
     font-size: 1.6rem;
-
+    font-family: "Arial";
     border: none;
 
     &--primary {
@@ -78,7 +78,13 @@ a {
             background-color: $primary-color-hover;
         }
     }
-
+    &--white{
+        background-color: white;
+        padding: 1.5rem 3rem;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        
+    }
     &--rounded {
         border-radius: 2rem;
     }

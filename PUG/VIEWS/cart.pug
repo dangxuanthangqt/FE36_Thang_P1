@@ -1,0 +1,50 @@
+extends ../LAYOUT/common-layout.pug
+//-mixin------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin rows(val)
+    tr
+        td
+            img(src="../../IMG/spx2-10.png" alt="")
+        td 
+            p CÂY VĂN PHÒNG
+        td 
+            p 270.000 Đ
+        td 
+            button.btn.btn--white 1
+        td
+            p 270.000 Đ
+        td
+            i(class="fas fa-trash-alt")
+block title
+    title Cart
+block content
+    include ../VARIABLE/cart.pug
+    section.breadcrumb
+        .container
+            +bread-crumb("Giỏ hàng")
+    section.cart
+        .container
+            h3.cart__title Giỏ hàng
+            table.cart__table
+                tr
+                    each val in list1
+                        th=val
+                each val in [1,2,3]
+                    +rows()
+            .cart__actions
+                button.btn.btn--rounded.btn--white HỦY ĐƠN HÀNG
+                button.btn--primary.btn.btn--rounded TIẾP TỤC MUA
+            .cart__payments
+                table
+                    tr
+                        td TỔNG TIỀN  ( CHƯA THUẾ ) 
+                        td 270.000 Đ
+                    tr
+                        td THUẾ  (VAT 10%)
+                        td 27.000 Đ
+                    tr
+                        td TỔNG PHẢI THANH TOÁN
+                        td 297.000 Đ
+                button.btn.btn--primary.btn--rounded THANH TOÁN

@@ -13,6 +13,7 @@ mixin logo ()
         img.header__middle__logo--mobile(src="../../IMG/logo-mobile.png" alt="")
         p.header__textlogo Món quà từ thiên nhiên                    
 section.header
+    include ../VARIABLE/header.pug
     .container
         .header__top
             .header__top-1
@@ -21,10 +22,10 @@ section.header
                 +list-social()
 
             .header__top-2
-                .header__login
+                a.header__login(href="./login.html")
                     i.fas.fa-user
                     | Đăng nhập
-                .header__register
+                a.header__register(href="./register.html")
                     i.fas.fa-user
                     | Đăng ký
     .header__middle
@@ -57,11 +58,11 @@ section.header
                     a(href="#")
                         img(src="../../IMG/HEADER/icon_collapse.png" alt="")
                 li.nav__item
-                    a(href="#") Trang chủ
+                    a(href="./home.html") Trang chủ
                 li.nav__item
-                    a(href="#") Giới thiệu
+                    a(href="./grid.html") Giới thiệu
                 li.nav__item.nav__item--list
-                    a.nav__item--drop(href="#") Sản phẩm
+                    a.nav__item--drop(href="./list.html") Sản phẩm
                     ul.dropdown
                         each val in ["Sản phẩm","Sản phẩm","Sản phẩm"]
                             li
@@ -74,16 +75,20 @@ section.header
                             li
                                 a(href="#")= val
                 li.nav__item
-                    a(href="#") Tin tức
+                    a(href="./news.html") Tin tức
                 li.nav__item
-                    a(href="#") Liên hệ
-            div.nav__mobile 
-                div.nav__mobile--1
-                    a(href="#")
-                        img(src="../../IMG/HEADER/icon_collapse.png" alt="")
-                div.nav__mobile--2
-                    i(class="fas fa-search")
-                    img(src="../../IMG/HEADER/icon-mobile.png" alt="")
+                    a(href="./contact.html") Liên hệ
+        div.nav__mobile 
+            div.nav__mobile--1
+                a.nav__mobile__collapse(href="#")
+                    img(src="../../IMG/HEADER/icon_collapse.png" alt="")
+                ul.nav__mobile__list
+                    each val in list_nav_mobile
+                        li.nav__mobile__item
+                            a(href="#")=val
+            div.nav__mobile--2
+                i(class="fas fa-search")
+                img(src="../../IMG/HEADER/icon-mobile.png" alt="")
 
 
 

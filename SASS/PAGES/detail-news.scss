@@ -51,7 +51,7 @@
             padding: 1rem;
             i{
                 display: inline-block;
-                margin-top: 1rem;
+               font-family: "Roboto Regular";
                 font-style: italic;
                 font-size: 1.3rem;
             }
@@ -71,7 +71,8 @@
         }
     }
     &__desc{
-        margin-top: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         font-size: 1.4rem;
         line-height: 1.2;
     }
