@@ -1,0 +1,111 @@
+
+extends ../LAYOUT/common-layout.pug
+
+//--------------------------------------
+mixin card-content(val)
+    .card__content
+        p.card__content__desc=val.title
+        ul.card__content__star 
+            each val in ["fas fa-star","fas fa-star","fas fa-star","fas fa-star","fas fa-star-half-alt"]
+                i(class=val)
+        p.card__content__price=val.price
+            |   đ 
+            del 250.000 đ
+mixin hot-product-list(val)
+    .card
+        .card__action
+            img(src=val.src alt="")
+            if val.discount=="NEW"
+                button.btn.btn--circle.btn--primary.discount=val.discount
+            if val.discount!=="NEW"
+                if val.discount==""
+                else 
+                    button.btn.btn--circle.btn--red.discount=val.discount          
+            .card__action__content
+                a.btn.btn--primary.btn--rounded(href="./detail-product.html") MUA NGAY 
+                button.btn.btn--circle55
+                    i(class="fas fa-search")
+        +card-content(val)
+mixin card-small(val)
+    .card-small
+        img(src=val.src alt="")
+        +card-content({title:val.title,price:val.price})
+mixin panigation
+    .panigation
+        i(class="fas fa-angle-left")
+        i(class="fas fa-angle-right")
+mixin news-card(val)
+    .news__card
+        img(src=val.src alt="")
+        .news__card__content
+            i.news__card__time=val.time
+            h4.news__card__title=val.title 
+            p.news__card__desc=val.desc
+            i.news__card__more Đọc tiếp
+//-----------------------------------------------
+
+block title
+    title Home
+block content
+    include ../VARIABLE/homepage.pug
+    include ../COMPONENTS/pop-up.pug
+    section.carousel
+        img(src="../../IMG/HEADER/slide-1920x590.png" alt="sas")
+        ul.carousel__btn
+            each val in [1,2,3]
+                li.carousel__btn__item 
+
+    section.hot-product
+        .container
+            .hot-product__top 
+                p.hot-product__title Sản phẩm nổi bật
+
+            .hot-product__list
+                .hot-product__list1
+                    each val in list1
+                        +hot-product-list(val)
+                .hot-product__list2
+                    each val in list1
+                        +hot-product-list(val)
+    section.hot-product1
+        .container 
+            .hot-product1__part1
+                .hot-product__top
+                    p.hot-product__title Sản phẩm nổi bật
+                    +panigation()
+
+                .hot-product1__list1
+                    each val in list3
+                        +card-small(val)
+            .hot-product1__part2
+                .hot-product__top
+                    p.hot-product__title Sản phẩm khuyến mãi
+                    +panigation()
+                .hot-product1__list2
+                    div.hot-product1__list2--desktop
+                        each val in list4
+                            +hot-product-list(val)
+                    div.hot-product1__list2--mobile
+                        +hot-product-list({title:"Cây dứa nhỏ",price:"375.000",discount:"",src:"../../IMG/spx2-11.png"})
+    section.banner
+        .container
+            img(class="banner__img" src="../../IMG/HEADER/banner-11140x217.png" alt="")
+    section.new-product
+        .container
+            .hot-product__top
+                p.hot-product__title Sản phẩm khuyến mãi
+                +panigation()
+            .new-product__list
+                .new-product__list--desktop 
+                    each val in list5
+                        +hot-product-list(val)
+                .new-product__list--mobile
+                    +hot-product-list({title:"Cây dứa nhỏ",price:"375.000",discount:"",src:"../../IMG/spx2-11.png"})
+    section.news
+        .container
+            .hot-product__top
+                p.hot-product__title Tin tức
+                +panigation()
+            .news__list
+                each val in list6
+                    +news-card(val)          

@@ -1,0 +1,42 @@
+extends ../LAYOUT/common-layout.pug
+//--mixin----------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin form-control(val)
+    div.register__form__control
+        label.register__form__label=val.label
+            span *
+        input(type="text" name=val.name required)
+
+block title
+    title Register
+block content
+    section.breadcrumb
+        .container
+            +bread-crumb("Đăng nhập")
+    section.register
+        .container
+            form#formElem.register__form(action="./login.html" name="register" method="POST")
+                h3.register__form__title THÔNG TIN CÁ NHÂN
+                div.register__form__container1
+                    each val in [{label:"Họ và tên",name:"fullName"},{label:"Số ĐT",name:"phoneNumber"},{label:"Địa chỉ email",name:"email"},{label:"Website của bạn",name:"yourWebsite"}]
+                        +form-control(val)
+                    .register__form__check
+                        input(type="checkbox")
+                        span Đăng ký nhận thông tin qua email
+                h3.register__form__title THÔNG TIN TÀI KHOẢN
+                div.register__form__container2
+                    div.register__form__control
+                        label.register__form__label Mật khẩu
+                            span *
+                        input(type="password" name="password" required)
+                    div.register__form__control
+                        label.register__form__label Nhập lại mật khẩu
+                            span *
+                        input(type="password" name="confirmPassword" required)
+                .register__form__action
+                    button#registerToLogin.btn.btn--rounded.btn--white QUAY LẠI
+                    button.btn.btn--rounded.btn--primary(type="submit") ĐĂNG KÝ
+block script
+    script(src="../../JS/register.js")

@@ -1,0 +1,74 @@
+extends ../LAYOUT/common-layout.pug
+
+//---------------mixin-----------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin catalog-title(val)
+    .catalog__title 
+        h4=val
+mixin list-link(list)
+    ul.catalog__list
+        each val in list
+            li.catalog__item
+                i(class="fas fa-angle-right")
+                a=val
+mixin card-news(val)
+    .card-news
+        .card-news__img
+            img(src=val.src, alt="")
+        .card-news__content
+            p=val.desc
+mixin card-news-detail(val)
+    li.news-content__list__item
+        a(href="./detail-news.html")=val.title
+        div 
+            i(class="fas fa-calendar-minus") 
+            span 20/20/2020
+            i(class="fas fa-clock")
+            span 11:20:00 AM
+            i(class="fas fa-comment-dots")
+            span 0 Bình luận
+        img(src=val.src, alt="")
+        p.line-clamp.line-clamp--3=val.desc
+//-----------------------
+block title
+    title News page
+block content
+    include ../VARIABLE/news.pug
+    section.breadcrumb
+        .container
+            +bread-crumb("Cây da lam")
+    section.news-content
+        .container
+            .news-content__catalog
+                .catalog__top
+                    +catalog-title("Danh mục sản phẩm")
+                    +list-link(list1)
+                .catalog__hot-news
+                    +catalog-title("Tin nổi bật")
+                    ul.catalog__list-card
+                        each val in list2 
+                            +card-news(val)
+                .catalog__tag
+                    +catalog-title("Blog tag")
+                    ul.catalog__list-tag
+                        each val in list3
+                          a(href="")=val
+            block list-news                  
+                ul.news-content__list
+                    each val in list4
+                        +card-news-detail(val)
+                    block pagination
+                        .grid-content__pagination
+                            p Trang trước
+                            ul.grid-content__pagination__list
+                                each val in ["1","2","3","4"]
+                                    li=val
+                            p Trang sau
+
+
+
+
+
+

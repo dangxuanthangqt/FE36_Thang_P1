@@ -1,8 +1,7 @@
-
 @import './variable.scss';
 
 html {
-    font-size: 62.5% !important;
+    font-size: 62.5%;
 }
 
 *,
@@ -10,43 +9,127 @@ html {
 *::after {
     box-sizing: border-box;
 }
-img{
-   // width: 100%;
-   
+
+img {
+    // width: 100%;
+
     display: block;
     object-fit: cover;
 }
-a{
+
+a {
     display: block;
     text-decoration: none;
 }
+button{
+    background-color: white;
+    outline: none;
+}
+
 .line-clamp {
     display: -webkit-box;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    &--3{
+
+    &--3 {
         -webkit-line-clamp: 3;
     }
-    &--4{
+
+    &--4 {
         -webkit-line-clamp: 4;
     }
-    &--5{
+
+    &--5 {
         -webkit-line-clamp: 5;
     }
 }
-.wrapper{
+
+.wrapper {
     max-width: 192rem;
     margin: 0 auto;
 }
-.container{
+
+.container {
     max-width: 117rem;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
-.gray-text{
+
+.gray-text {
     color: $gray-text;
-    &--light{
+
+    &--light {
         color: $gray-light-text;
+    }
+}
+
+.btn {
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    font-size: 1.6rem;
+    font-family: "Arial";
+    border: none;
+
+    &--primary {
+        background-color: $primary-color;
+        padding: 1.5rem 3rem;
+
+        &:hover {
+            background-color: $primary-color-hover;
+        }
+    }
+    &--white{
+        background-color: white;
+        padding: 1.5rem 3rem;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        
+    }
+    &--rounded {
+        border-radius: 2rem;
+    }
+
+    &--circle {
+        border-radius: 50%;
+    }
+
+    &--circle55 {
+        border-radius: 50%;
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    &--red {
+        background-color: $red-color;
+    }
+}
+
+.color {
+    &--green {
+        color: #98cb4a;
+    }
+
+    &--orange {
+        color: #f76d3c;
+    }
+
+    &--purple {
+        color: #913ccd;
+    }
+
+    &--pink {
+        color: #f15f74;
+    }
+
+    &--yellow {
+        color: #f7d842;
+    }
+
+    &--blue {
+        color: #5481e6;
     }
 }

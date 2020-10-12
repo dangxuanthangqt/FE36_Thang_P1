@@ -1,0 +1,91 @@
+extends ../LAYOUT/common-layout.pug
+//-mixin------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin rows(val)
+    tr.tr-item
+        td
+            img(src="../../IMG/spx2-10.png" alt="")
+        td 
+            p CÂY VĂN PHÒNG
+        td 
+            p 270.000 Đ
+        td 
+            input.quantityOfItem(type="number" name="quantity" min="1" max=50)
+        td
+            p 270.000 Đ
+        td
+            button.btn-deleteItem 
+                i(class="fas fa-trash-alt")
+block title
+    title Cart
+block content
+    include ../VARIABLE/cart.pug
+    section.breadcrumb
+        .container
+            +bread-crumb("Giỏ hàng")
+    section.processbar 
+        .container
+            ul.processbar__list
+                li.processbar__login
+                    i.fas.fa-user
+                    p Đăng nhập
+                li.processbar__address
+                    i.fas.fa-map-marked-alt
+                    p Nhập nhập thông tin
+                li.processbar__payment
+                    i.fas.fa-money-check-alt 
+                    p Thanh toán
+    section.modal-address
+        .container
+            button#myBtn.btn.btn--primary Nhập thông tin địa chỉ người nhận
+            div#myModal.modal
+                div.modal-content
+                    div.modal-header
+                        span.close &times;
+                        h2 Nhập thông tin
+                    form.modal-body(name="form-address")
+                        div.register__form__control
+                            label.register__form__label Nhập tên người nhận
+                                span *
+                            input(type="text" name="fullName" required)
+                        div.register__form__control
+                            label.register__form__label Nhập số điện thoại liên hệ khi nhận hàng
+                                span *
+                            input(type="text" name="phoneNumber" required)
+                        div.register__form__control
+                            label.register__form__label Nhập địa chỉ nhận hàng
+                                span *
+                            input(type="text" name="address" required)
+                        .modal-action
+                            button.btn.btn--primary.btn--rounded(type="submit") Xác nhận và tiếp tục
+                            
+                            
+    section.cart
+        form.container(name="form-cart")
+            h3.cart__title Giỏ hàng
+            table.cart__table
+                tr
+                    each val in list1
+                        th=val
+                each val in [1,2,3]
+                    +rows()
+            .cart__actions
+                button#huydonhang.btn.btn--rounded.btn--white HỦY ĐƠN HÀNG
+                button#tieptucmua.btn--primary.btn.btn--rounded TIẾP TỤC MUA
+            .cart__payments
+                table
+                    tr
+                        td TỔNG TIỀN  ( CHƯA THUẾ ) VND
+                        td#totalnotax 270.000 
+                    tr
+                        td THUẾ  (VAT 10%) VND
+                        td#tax 27.000 Đ
+                    tr
+                        td TỔNG PHẢI THANH TOÁN (VND)
+                        td#total 297.000 Đ
+                button#paymentConfirm.btn.btn--primary.btn--rounded(type="submit") THANH TOÁN
+block script
+    script(src="../../JS/middle.js")
+    script(src="../../JS/cart.js")

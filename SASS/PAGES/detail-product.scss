@@ -1,0 +1,244 @@
+.detail-product {
+    .container {
+        @include flexbox(space-between);
+    }
+
+    &__product-images {
+        width: 40%;
+
+    }
+
+    &__product-contents {
+        width: 58%;
+    }
+}
+
+.product-images {
+    &__1 {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        @include flexbox(space-between);
+        margin-top: 2rem;
+
+    }
+
+    &__item {
+        width: 18%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.product-contents__top {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $gray-border;
+    width: 100%;
+
+    &__name {
+        font-size: 2rem;
+        font-family: "Arial";
+        color: $gray-text;
+    }
+
+    .card__content__star {
+        padding: 1rem 0;
+    }
+
+    del {
+        color: $gray-light-text;
+        font-family: "Arial";
+    }
+}
+
+.product-contents {
+    &__desc {
+        font-size: 1.3rem;
+        color: $gray-light-text;
+        font-family: "Arial";
+        line-height: 1.5;
+        padding: 2rem 0;
+        border-bottom: 1px solid $gray-border;
+    }
+
+    &__quality {
+        display: flex;
+        align-items: baseline;
+        color: $gray-text;
+        font-family: Arial;
+        font-size: 2rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid $gray-border;
+        ;
+
+        span {
+            padding-right: 2rem;
+        }
+        input{
+            font-size: 2rem;
+            width: 8rem;
+            padding: 1rem 1.5rem;
+            outline: none;
+            border: 1px solid $gray-border;
+        }
+        button {
+            font-size: 2rem;
+            padding: 1rem 1.5rem;
+            color: $gray-text;
+            border: 1px solid $gray-border;
+            &:hover{
+                background-color: $primary-color;
+            }
+            &:nth-child(3) {
+                padding: 1rem 3rem;
+            }
+        }
+    }
+
+    &__action {
+        padding: 2rem 0;
+
+        i {
+            margin-left: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        i::before {
+            font-size: 1.6rem;
+            padding: 1.5rem;
+            border-radius: 50%;
+            border: 1px solid $gray-light-text;
+
+
+        }
+    }
+}
+
+.detail-product__tag {
+    margin-top: 8rem;
+    width: 100%;
+
+    &__title {
+
+        ul {
+
+            @include flexbox();
+
+            li {
+                cursor: pointer;
+                width: 33.333%;
+                font-size: 1.6rem;
+                color: $gray-text;
+                font-family: "Arial";
+                padding: 1.5rem 6rem;
+                border-bottom: 1px solid $gray-border;
+
+                &:nth-child(1) {
+                    color: $primary-color;
+                    border-top: 2px solid $gray-text;
+                    border-left: 1px solid $gray-border;
+                    border-right: 1px solid $gray-border;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    &__desc {
+        border: 1px solid $gray-border;
+        border-top: none;
+        padding: 1rem 4rem 3.5rem;
+
+        p {
+            padding-top: 3rem;
+            line-height: 2.0;
+            font-size: 1.2rem;
+            color: $gray-light-text;
+            font-family: "Arial";
+        }
+    }
+}
+
+.same-products {
+    margin-bottom: 5rem;
+    margin-top: 6rem;
+
+    &__top {
+        border-bottom: 1px solid $gray-border;
+        @include flexbox(space-between)
+    }
+
+    &__list {
+        @include flexbox(space-between);
+        margin-top: 4rem;
+
+        .card {
+            width: 23.5%;
+        }
+    }
+}
+
+@include media-mobile {
+    .detail-product {
+
+        &__product-images {
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+
+        &__product-contents {
+            width: 100%;
+        }
+    }
+
+    .detail-product__tag {
+        margin-top: 8rem;
+        width: 100%;
+
+        &__title {
+            ul {
+
+                @include flexbox();
+
+                li {
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 1.6rem;
+                    color: $gray-text;
+                    font-family: "Arial";
+                    padding: 1.5rem 6rem;
+                    border: 1px solid $gray-border;
+
+                }
+            }
+        }
+    }
+
+    .same-products {
+        margin-bottom: 5rem;
+        margin-top: 6rem;
+
+        &__top {
+            border-bottom: 1px solid $gray-border;
+            @include flexbox(space-between)
+        }
+
+        &__list {
+            @include flexbox(space-between);
+            margin-top: 4rem;
+
+            .card {
+                width: 48%;
+            }
+        }
+    }
+}

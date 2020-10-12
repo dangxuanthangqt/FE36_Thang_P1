@@ -1,0 +1,107 @@
+extends ../LAYOUT/common-layout.pug
+
+//----mixin-----------------
+mixin bread-crumb(val)
+    a.bread-crumb(href="./home.html") Home | 
+    a.bread-crumb.bread-crumb--active(href="./home.html")=val
+mixin list-link(list)
+    ul.catalog__list
+        each val in list
+            li.catalog__item
+                i(class="fas fa-angle-right")
+                a=val
+mixin catalog-title(val)
+    .catalog__title 
+        h4=val
+mixin search-color(list)
+    ul.search-color__list
+        each val in list
+            li.search-color__item
+                i.fas.fa-circle(class=val.class)
+                a.search-color__link=val.color
+mixin card(val)
+    .card
+        .card__action
+            img(src=val.src alt="")
+            if val.discount=="NEW"
+                button.btn.btn--circle.btn--primary.discount=val.discount
+            if val.discount!=="NEW"
+                if val.discount==""
+                else 
+                    button.btn.btn--circle.btn--red.discount=val.discount          
+            .card__action__content
+                a.btn.btn--primary.btn--rounded(href="./detail-product.html") MUA NGAY 
+                button.btn.btn--circle55
+                    i(class="fas fa-search")
+        .card__content
+            p.card__content__desc=val.title
+            ul.card__content__star 
+                each val in ["fas fa-star","fas fa-star","fas fa-star","fas fa-star","fas fa-star-half-alt"]
+                    i(class=val)
+            p.card__content__price=val.price
+                |   đ 
+                del 250.000 đ
+//---------------------------
+block title
+    title Grid
+block content
+    include ../VARIABLE/grid.pug
+    block bread-crumb
+        section.breadcrumb
+            .container
+                +bread-crumb("Danh sách sản phẩm")
+        section.grid-content
+            .container
+                .grid-content__catalog
+                    .catalog__top
+                        +catalog-title("Danh mục sản phẩm")
+                        +list-link(list1)
+                    .catalog__search-price
+                        +catalog-title("Tìm theo giá")
+                        +list-link(list2)
+                    .catalog__search-color
+                        +catalog-title("Tìm theo màu")
+                        +search-color(list3)
+                .grid-content__list
+                    img(src="../../IMG/GRID/banner.png" alt="")
+                    .grid-content__filter
+                        .grid-content__filter1
+                            i(class="fas fa-th")
+                            i(class="fas fa-th-list")
+                        .grid-content__filter2
+                            form(action="")
+                                label Sắp xếp theo:
+                                <select name="producs" id="products">
+                                    <option value="name">Tên sản phẩm</option>
+                                </select>
+                            form(action="")
+                                label Show:
+                                <select name="quantity" id="quantityShow">
+                                    <option value="6">6</option>
+                                    <option value="9">9</option>
+                                    <option value="12">12</option>
+                                </select>
+                    block list-card
+                        ul.grid-content__card
+                            each val in list4
+                                +card(val)
+            block pagination
+                .container
+                    .grid-content__pagination
+                        button#prePage Trang trước
+                        ul.grid-content__pagination__list
+                            each val in ["1","2","3","4"]
+                                li
+                                    button.btn=val
+                        button#nextPage Trang sau
+block script
+    script( src='../../JS/product_grid.js')
+    script( src='../../JS/middle.js')
+    
+
+
+
+
+
+
+

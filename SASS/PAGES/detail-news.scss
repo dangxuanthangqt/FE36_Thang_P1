@@ -1,0 +1,146 @@
+.detail-news{
+    width: 74%;
+}
+.list-comments{
+    margin-top: 3rem;
+    font-family: "Arial";
+    color: $gray-light-text;
+    
+    h3{
+        font-size: 2rem;
+        font-weight: bold;
+
+    }
+    &__list{
+        @include flexbox(flex-end);
+    }
+    &__item{
+        @include flexbox();
+       
+        &:nth-child(odd){
+            padding: 3rem 0;
+            border-top: 1px solid $gray-border;
+            .list-comments__item__avatar{
+                width: 13%;
+                
+            }
+            .list-comments__item__content{
+                width: 87%;
+            }
+        }
+        &:nth-child(even){
+            width: 87%;
+            padding: 3rem 0;
+            border-top: 1px solid $gray-border;
+            .list-comments__item{
+                
+                &__avatar{
+                    width: 14%;
+                }
+                &__content{
+                    width: 86%;
+                }
+               
+            }
+
+        }
+        &:first-child{
+            border: none;
+        }
+        &__content{
+            padding: 1rem;
+            i{
+                display: inline-block;
+               font-family: "Roboto Regular";
+                font-style: italic;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+.comment{
+    &__top{
+        @include flexbox(space-between);
+        font-size: 1.4rem;
+        color: $gray-text;
+        a{
+            font-style: italic;
+            text-decoration: underline;
+            font-family: "Arial";
+            color: $gray-text;
+        }
+    }
+    &__desc{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+   
+}
+.write-comment{
+    margin-top: 3rem;
+    font-family: "Arial";
+    color: $gray-light-text;
+    h3{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    form{
+        margin-top: 3rem;
+        @include flexbox(space-between);
+        input{
+            width: 32%;
+            padding: 1.5rem;
+            border: 1px solid $gray-border;
+        }
+        textarea{
+            margin-top: 2rem;
+            width: 100%;
+            padding: 1.5rem;
+            border: 1px solid $gray-border;
+            font-family: "Arial";
+        }
+        div{
+            margin-top: 2rem;
+            width: 100%;
+            @include flexbox(flex-end);
+            button{
+                    padding: 1.5rem 6rem;
+            }
+        }
+    }
+}
+@include media-mobile(){
+    .detail-news{
+        width: 100%;
+    }
+    .news-content__list__item{
+        p{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+        }
+    }
+    .list-comments__item{
+        &__avatar{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .comment{
+        &__desc{
+            @include line-Clamp(3);
+        }
+    }
+    .write-comment{
+        form{
+            input{
+                width: 100%;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

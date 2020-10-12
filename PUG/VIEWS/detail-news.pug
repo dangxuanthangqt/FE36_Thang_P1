@@ -1,0 +1,43 @@
+extends ./news.pug
+mixin comment-item
+    .list-comments__item
+        .list-comments__item__avatar
+            img(src="../../IMG/NEWS-DETAILS/avatar.png" alt="")
+        .list-comments__item__content
+            div.comment__top
+                p Dang Xuan Thang
+                a(href="") Trả lời
+            p.comment__desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio iusto at necessitatibus quas facilis quibusdam ut reprehenderit asperiores eius veniam, dignissimos sapiente  doloribus?
+            i Thứ 7, 26/12/2015 12: 00 AM
+block title
+    title Detail news
+block  list-news
+    include ../VARIABLE/news-details.pug
+    .detail-news
+        .news-content__list__item
+            a(href="#") Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên
+            div 
+                i(class="fas fa-calendar-minus") 
+                span 20/20/2020
+                i(class="fas fa-clock")
+                span 11:20:00 AM
+                i(class="fas fa-comment-dots")
+                span 0 Bình luận
+            img(src="../../IMG/NEWS-DETAILS/1.png" alt="")
+            p=article1
+            img(src="../../IMG/NEWS-DETAILS/2.png" alt="")
+            p=article2
+        .list-comments
+            h3 BÌNH LUẬN (3)
+            ul.list-comments__list
+                each val in ["1","2","3"]
+                    +comment-item()
+        .write-comment
+            h3 VIẾT BÌNH LUẬN:
+            form
+                 input(type="text" placeholder="Họ và tên:")
+                 input(type="text" placeholder="Email:")
+                 input(type="text" placeholder="Phone:")
+                 textarea(rows="4" placeholder="Binh luan:")
+                 div 
+                    button.btn.btn--primary.btn--rounded GỬI

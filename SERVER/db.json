@@ -1,0 +1,169 @@
+{
+  "users": [
+    {
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "email": "dangxuanthangqt@gmail.com",
+      "yourWebsite": "http://127.0.0.1:8080/HTML/VIEWS/register.html",
+      "password": "123123aaA",
+      "id": "afUVwfnYD8VZuRCR4hbq"
+    }
+  ],
+  "invoices": [
+  
+  ],
+  "products": [
+    {
+      "id": "1fsdf",
+      "title": "Cây cọ ta",
+      "price": 210000,
+      "discount": "",
+      "src": "../../IMG/spx2-4.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "2asdsa",
+      "title": "Cây dừa nhỏ",
+      "price": 230000,
+      "discount": "",
+      "src": "../../IMG/spx2-5.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "dasdsa3",
+      "title": "Cây phong lan",
+      "price": 210000,
+      "discount": "",
+      "src": "../../IMG/spx2-6.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "4dasda",
+      "title": "Cây chân chim",
+      "price": 250002,
+      "discount": "",
+      "src": "../../IMG/spx2-7.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "5addas",
+      "title": "Cây chân chim",
+      "price": 360000,
+      "discount": "",
+      "src": "../../IMG/spx2-8.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "asd6",
+      "title": "Cây cọ ta",
+      "price": 480000,
+      "discount": "50%",
+      "src": "../../IMG/spx2-9.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "addas7",
+      "title": "Cây dứa nhỏ",
+      "price": 900000,
+      "discount": "",
+      "src": "../../IMG/spx2-11.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "addas8",
+      "title": "Cây cọ ta",
+      "price": 100000,
+      "discount": "NEW",
+      "src": "../../IMG/spx2-6.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "9fafds",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-11.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "10fdsf",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-10.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "11gdfd9",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-9.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "13213fsd9",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-8.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "123sfd9",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-7.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "fsfsdfsa",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-6.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "93gfregre213",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-5.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "gergerge",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-4.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "sffdsht",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-5.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "645tyuyt69",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-6.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    },
+    {
+      "id": "9gfdg8768",
+      "title": "Cây dứa nhỏ",
+      "price": 50000,
+      "discount": "",
+      "src": "../../IMG/spx2-7.png",
+      "description": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+    }
+  ]
+}
