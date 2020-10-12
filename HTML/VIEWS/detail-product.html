@@ -46,8 +46,8 @@
                   <div class="header__middle__form--1">
                     <input type="text" name="a" placeholder="Tìm kiếm ..."/><i class="fas fa-search"></i>
                   </div>
-                  <div class="header__middle__form--2"><img src="../../IMG/HEADER/sp.png" alt=""/>
-                    <p>0 Sản phẩm</p>
+                  <div class="header__middle__form--2"><a href="./cart.html"><img src="../../IMG/HEADER/sp.png" alt=""/></a>
+                    <p> <span id="productQuantityInCart">0     </span>Sản phẩm</p>
                   </div>
                 </form>
               </div>
@@ -138,11 +138,13 @@
             </div>
             <p class="product-contents__desc">Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.</p>
             <div class="product-contents__quality"><span>Số lượng</span>
-              <button class="btn">-</button>
-              <button class="btn">1</button>
-              <button class="btn">+</button>
+              <button class="btn btn--sub">-</button>
+              <input type="number" value="1"/>
+              <button class="btn btn--add">+</button>
             </div>
-            <div class="product-contents__action"><a class="btn btn--primary btn--rounded" href="./cart.html">MUA NGAY</a><i class="fas fa-search"></i><i class="fas fa-heart"></i></div>
+            <div class="product-contents__action">
+              <button class="btn btn--primary btn--rounded">MUA NGAY</button><i class="fas fa-search"></i><i class="fas fa-heart"></i>
+            </div>
             <div class="product-contents__like"><img src="../../IMG/fake-social.png" alt=""/></div>
           </div>
           <div class="detail-product__tag">
@@ -335,6 +337,8 @@
           </div>
         </div>
       </div>
+      <script src="../../JS/product-detail.js"></script>
+      <script src="../../JS/middle.js"></script>
     </div>
   </body>
 </html>

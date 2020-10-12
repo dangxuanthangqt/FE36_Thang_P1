@@ -59,11 +59,11 @@ block content
                 p.product-contents__desc Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
                 .product-contents__quality
                     span Số lượng
-                    button.btn -
-                    button.btn 1
-                    button.btn +
+                    button.btn.btn--sub -
+                    input(type="number" value="1")
+                    button.btn.btn--add +
                 .product-contents__action
-                    a.btn.btn--primary.btn--rounded(href="./cart.html") MUA NGAY
+                    button.btn.btn--primary.btn--rounded MUA NGAY
                     i(class="fas fa-search")
                     i(class="fas fa-heart")
                 .product-contents__like
@@ -84,3 +84,6 @@ block content
             .same-products__list
                 each val in list2
                     +card(val)
+block script
+    script(src="../../JS/product-detail.js")
+    script(src="../../JS/middle.js")

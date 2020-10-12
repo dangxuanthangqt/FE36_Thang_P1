@@ -46,8 +46,8 @@
                   <div class="header__middle__form--1">
                     <input type="text" name="a" placeholder="Tìm kiếm ..."/><i class="fas fa-search"></i>
                   </div>
-                  <div class="header__middle__form--2"><img src="../../IMG/HEADER/sp.png" alt=""/>
-                    <p>0 Sản phẩm</p>
+                  <div class="header__middle__form--2"><a href="./cart.html"><img src="../../IMG/HEADER/sp.png" alt=""/></a>
+                    <p> <span id="productQuantityInCart">0     </span>Sản phẩm</p>
                   </div>
                 </form>
               </div>
@@ -118,11 +118,11 @@
         <div class="container">
           <div class="login__form">
             <h3 class="login__form__title">THÔNG TIN CÁ NHÂN</h3>
-            <form action="">
+            <form name="login">
               <label class="login__form__label" for="">Email của bạn</label>
-              <input class="login__form__input" type="text" placeholder="Email"/>
+              <input class="login__form__input" name="email" type="text" placeholder="Email" required="required"/>
               <label class="login__form__label" for="">Mật khẩu</label>
-              <input class="login__form__input" type="password" placeholder="Password"/>
+              <input class="login__form__input" name="password" type="password" placeholder="Password" required="required"/>
               <div class="login__form__actions">
                 <input type="checkbox"/>
                 <label>Ghi nhớ tài khoản</label><a href="#">Bạn quên mật khẩu ?</a>
@@ -133,7 +133,7 @@
           <div class="login__question">
             <h3 class="login__form__title">BẠN CHƯA CÓ TÀI KHOẢN ?</h3>
             <p class="login__question__desc">Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra có rất nhiều chính sách và ưu đãi cho các thành viên citybike.</p>
-            <button class="btn btn--primary btn--rounded">ĐĂNG KÝ</button>
+            <button class="btn btn--primary btn--rounded" id="gotoLogin">ĐĂNG KÝ</button>
           </div>
         </div>
       </section>
@@ -238,6 +238,7 @@
           </div>
         </div>
       </div>
+      <script src="../../JS/login.js"></script>
     </div>
   </body>
 </html>

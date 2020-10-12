@@ -13,11 +13,11 @@ block content
         .container
             .login__form
                 h3.login__form__title THÔNG TIN CÁ NHÂN
-                form(action="")
+                form(name="login")
                     label.login__form__label(for="") Email của bạn
-                    input.login__form__input(type="text" placeholder ="Email")
+                    input.login__form__input(name="email" type="text" placeholder ="Email" required)
                     label.login__form__label(for="") Mật khẩu
-                    input.login__form__input(type="password" placeholder ="Password")
+                    input.login__form__input(name="password" type="password" placeholder ="Password" required)
                     .login__form__actions
                         input(type="checkbox")
                         label Ghi nhớ tài khoản
@@ -26,4 +26,6 @@ block content
             .login__question
                 h3.login__form__title BẠN CHƯA CÓ TÀI KHOẢN ?
                 p.login__question__desc Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra có rất nhiều chính sách và ưu đãi cho các thành viên citybike.
-                button.btn.btn--primary.btn--rounded ĐĂNG KÝ
+                button#gotoLogin.btn.btn--primary.btn--rounded ĐĂNG KÝ
+block script
+    script(src="../../JS/login.js")

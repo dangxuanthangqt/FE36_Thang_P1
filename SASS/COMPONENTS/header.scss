@@ -106,11 +106,18 @@
             width: 100%;
            
             &--2 {
-                img {
+                button {
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
                     cursor: pointer;
                 }
+                span{
+                    font-size: 2rem;
+                    color: $red-color;
+                    margin-right: 5px;
+                }
             }
-
         }
 
     }

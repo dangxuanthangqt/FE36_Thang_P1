@@ -76,20 +76,29 @@ block content
                                 </select>
                             form(action="")
                                 label Show:
-                                <select name="quantiti" id="quantiti">
-                                    <option value="quantiti">15</option>
+                                <select name="quantity" id="quantityShow">
+                                    <option value="6">6</option>
+                                    <option value="9">9</option>
+                                    <option value="12">12</option>
                                 </select>
                     block list-card
                         ul.grid-content__card
                             each val in list4
                                 +card(val)
-                    block pagination
-                        .grid-content__pagination
-                            p Trang trước
-                            ul.grid-content__pagination__list
-                                each val in ["1","2","3","4"]
-                                 li=val
-                            p Trang sau
+            block pagination
+                .container
+                    .grid-content__pagination
+                        button#prePage Trang trước
+                        ul.grid-content__pagination__list
+                            each val in ["1","2","3","4"]
+                                li
+                                    button.btn=val
+                        button#nextPage Trang sau
+block script
+    script( src='../../JS/product_grid.js')
+    script( src='../../JS/middle.js')
+    
+
 
 
 

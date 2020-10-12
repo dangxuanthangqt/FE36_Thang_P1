@@ -7,9 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "sass --watch ./SASS/main.scss ./CSS/main.css",
     "pug": "pug -w ./PUG/VIEWS -o ./HTML/VIEWS -P",
-    "live":"live-server --open=HTML/VIEWS/home.html",
+    "live": "live-server --open=HTML/VIEWS/home.html",
     "start": "npm-run-all -p -r scss pug live"
   },
   "author": "Dang Xuan Thang",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "json-server": "^0.16.2",
+    "randomstring": "^1.1.5"
+  }
 }

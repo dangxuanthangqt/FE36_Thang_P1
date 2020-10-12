@@ -5,9 +5,9 @@ mixin bread-crumb(val)
     a.bread-crumb.bread-crumb--active(href="./home.html")=val
 mixin form-control(val)
     div.register__form__control
-        label.register__form__label=val
+        label.register__form__label=val.label
             span *
-        input(type="text")
+        input(type="text" name=val.name required)
 
 block title
     title Register
@@ -17,19 +17,26 @@ block content
             +bread-crumb("Đăng nhập")
     section.register
         .container
-            form.register__form(action="")
+            form#formElem.register__form(action="./login.html" name="register" method="POST")
                 h3.register__form__title THÔNG TIN CÁ NHÂN
                 div.register__form__container1
-                    each val in ["Họ và tên","Số ĐT","Địa chỉ email","Website của bạn"]
+                    each val in [{label:"Họ và tên",name:"fullName"},{label:"Số ĐT",name:"phoneNumber"},{label:"Địa chỉ email",name:"email"},{label:"Website của bạn",name:"yourWebsite"}]
                         +form-control(val)
                     .register__form__check
                         input(type="checkbox")
                         span Đăng ký nhận thông tin qua email
                 h3.register__form__title THÔNG TIN TÀI KHOẢN
                 div.register__form__container2
-                    each val in ["Mật khẩu","Nhập lại mật khẩu"]
-                        +form-control(val)
+                    div.register__form__control
+                        label.register__form__label Mật khẩu
+                            span *
+                        input(type="password" name="password" required)
+                    div.register__form__control
+                        label.register__form__label Nhập lại mật khẩu
+                            span *
+                        input(type="password" name="confirmPassword" required)
                 .register__form__action
-                    button.btn.btn--rounded.btn--white QUAY LẠI
-                    button.btn.btn--rounded.btn--primary ĐĂNG KÝ
-                    
+                    button#registerToLogin.btn.btn--rounded.btn--white QUAY LẠI
+                    button.btn.btn--rounded.btn--primary(type="submit") ĐĂNG KÝ
+block script
+    script(src="../../JS/register.js")

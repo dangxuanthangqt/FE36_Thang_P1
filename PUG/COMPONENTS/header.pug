@@ -49,8 +49,12 @@ section.header
                             input(type="text" name="a" placeholder="Tìm kiếm ...")
                             i(class="fas fa-search")
                         div.header__middle__form--2
-                            img(src="../../IMG/HEADER/sp.png" alt="")
-                            p 0 Sản phẩm
+                            a(href="./cart.html")
+                                img(src="../../IMG/HEADER/sp.png" alt="")
+                                
+                            p 
+                                span#productQuantityInCart 0     
+                                | Sản phẩm
     nav.header__nav
         .container
             ul.nav__list
