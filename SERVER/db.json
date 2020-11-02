@@ -7,10 +7,113 @@
       "yourWebsite": "http://127.0.0.1:8080/HTML/VIEWS/register.html",
       "password": "123123aaA",
       "id": "afUVwfnYD8VZuRCR4hbq"
+    },
+    {
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "email": "xuanthang@gmail.com",
+      "yourWebsite": "http://127.0.0.1:8080/HTML/VIEWS/register.html",
+      "password": "123123aaA",
+      "id": "gM6bzwZo8JC6Bkxa3XQf"
+    },
+    {
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "email": "dangxuanthangqt97@gmail.com",
+      "yourWebsite": "http://127.0.0.1:8080/HTML/VIEWS/register.html",
+      "password": "123123aaA",
+      "id": "fsK4rx0sU3yHEAmfiEE8"
     }
   ],
   "invoices": [
-  
+    {
+      "id": "ZjAbirjFrGyPW4nOoc3u",
+      "user_id": "PulJ3Ov55HHmQIjTPSmc",
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "address": "cổng trường bách khoa",
+      "cart": [
+        {
+          "id": "1fsdf",
+          "quantity": 10
+        }
+      ],
+      "total": 2310000
+    },
+    {
+      "id": "Y51Dvgs7BmkJRbdQA1iZ",
+      "user_id": "afUVwfnYD8VZuRCR4hbq",
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "address": "ly thuong ket",
+      "cart": [
+        {
+          "id": "dasdsa3",
+          "quantity": 2
+        },
+        {
+          "id": "2asdsa",
+          "quantity": 2
+        },
+        {
+          "id": "1fsdf",
+          "quantity": 5
+        }
+      ],
+      "total": 2123000
+    },
+    {
+      "id": "1J9R0VFyRue0lijEGXec",
+      "user_id": "afUVwfnYD8VZuRCR4hbq",
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "address": "ly thuong ket",
+      "cart": [
+        {
+          "id": "5addas",
+          "quantity": 1
+        },
+        {
+          "id": "4dasda",
+          "quantity": 1
+        },
+        {
+          "id": "dasdsa3",
+          "quantity": 1
+        },
+        {
+          "id": "2asdsa",
+          "quantity": 1
+        },
+        {
+          "id": "1fsdf",
+          "quantity": 1
+        }
+      ],
+      "total": 13860022
+    },
+    {
+      "id": "mMglWxO4c79Ex1XZlN8R",
+      "user_id": "afUVwfnYD8VZuRCR4hbq",
+      "fullName": "thang dang",
+      "phoneNumber": "0979475216",
+      "address": "ly thuong ket",
+      "cart": [
+        {
+          "id": "dasdsa3",
+          "quantity": 1
+        },
+        {
+          "id": "2asdsa",
+          "quantity": 1
+        },
+        {
+          "id": "1fsdf",
+          "quantity": 1
+        }
+      ],
+      "total": 715000
+    }
   ],
   "products": [
     {

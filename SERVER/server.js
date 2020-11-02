@@ -65,7 +65,7 @@ server.post("/invoices", (req,res)=>{
   const invoices = db.get("invoices");
   try {
     invoices.push(data).write();
-    return res.status(300).json({
+    return res.json({
       message:"Thanh thanh toán thành công"
     })
   } catch (error) {
